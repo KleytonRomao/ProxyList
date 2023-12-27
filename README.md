@@ -1,6 +1,6 @@
 # ProxysV1
 
-O **ProxysV1** é uma ferramenta simples em Python para extrair informações de proxies de uma página web e armazená-las em um arquivo TXT. Além disso, a ferramenta oferece a capacidade de carregar e analisar esses proxies a partir do arquivo gerado.
+O **ProxysV1** é uma ferramenta simples em Python para extrair informações de proxies de uma página web e armazená-las em um arquivo JSON. Além disso, a ferramenta oferece a capacidade de carregar e analisar esses proxies a partir do arquivo gerado.
 
 ## Como Usar
 
