@@ -1,6 +1,6 @@
-# Proxy Scraper
+# ProxysV1
 
-O **Proxy Scraper** é uma ferramenta simples em Python para extrair informações de proxies de uma página web e armazená-las em um arquivo TXT. Além disso, a ferramenta oferece a capacidade de carregar e analisar esses proxies a partir do arquivo gerado.
+O **ProxysV1** é uma ferramenta simples em Python para extrair informações de proxies de uma página web e armazená-las em um arquivo TXT. Além disso, a ferramenta oferece a capacidade de carregar e analisar esses proxies a partir do arquivo gerado.
 
 ## Como Usar
 
@@ -51,7 +51,7 @@ O **Proxy Scraper** é uma ferramenta simples em Python para extrair informaçõ
 
 3. **Observações sobre Tipos de Proxy:**
 
-   O **Proxy Scraper** permite a coleta de proxies de diferentes tipos, como socks5 e socks4, ao ajustar a URL fornecida. Se você deseja obter proxies de um tipo específico, você pode modificar a URL de acordo.
+   O **ProxysV1** permite a coleta de proxies de diferentes tipos, como socks5 e socks4, ao ajustar a URL fornecida. Se você deseja obter proxies de um tipo específico, você pode modificar a URL de acordo.
 
    ### Exemplo: Obtendo Proxies SOCKS5,SOCKS4,HTTP,HTTPS
 
