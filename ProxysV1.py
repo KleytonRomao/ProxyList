@@ -58,16 +58,6 @@ class ProxyScraper:
                 # Remova strings vazias da lista resultante
                 proxy_info = list(filter(lambda x: x.strip() != "", proxy_info))
 
-                # Imprima as informações formatadas
-                print("IP:", proxy_info[0])
-                print("Port:", proxy_info[1])
-                print("Country:", proxy_info[2])
-                print("City:", proxy_info[3])
-                print("Speed:", proxy_info[4])
-                print("Type:", proxy_info[5])
-                print("Anonymity:", proxy_info[6])
-                print("Last check:", proxy_info[7])
-                print("\n" + "="*40 + "\n")
 
 # Uso da classe
 url = 'https://www.freeproxy.world/?type=socks5&anonymity=&country=&speed=&port=&page=1'
