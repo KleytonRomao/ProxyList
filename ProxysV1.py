@@ -31,7 +31,7 @@ class ProxyScraper:
                 data_list.append({'proxy': row.text.strip()})
 
             # Converter a lista em uma string JSON
-            json_data = json.dumps(data_list, indent=2, ensure_ascii=False)
+            json_data = json.dumps(data_list, ensure_ascii=False)
 
             # Salvar o JSON em um arquivo
             with open(self.output_file, 'w', encoding='utf-8') as json_file:
