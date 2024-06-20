@@ -11,7 +11,7 @@ for proxy in data:
     if "IP" in proxy and "Porta" in proxy:
         ip_adrss = {proxy['IP']}
         porta_addrss = {proxy['Porta']}
-        command = f"nc -vz {ip_adrss}{porta_addrss}"
+        command = f"nc -vz {ip_adrss} {porta_addrss}"
         command = command.replace("{", "").replace("}", "").replace("'", "")
         os.system(command)
     else:
