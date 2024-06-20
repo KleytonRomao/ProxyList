@@ -1,21 +1,18 @@
 import json
 import os
 
-# Abrir o arquivo JSON
+# Abrir e ler o arquivo JSON
 with open('proxy.json', 'r') as f:
-    # Carregar os dados do arquivo JSON
-    proxies = json.load(f)
-    
-    # Iterar sobre cada proxy no arquivo JSON
-    for proxy in proxies:
-        if 'ip' in proxy and 'porta' in proxy:
-            ip = proxy['ip']
-            porta = proxy['porta']
-            
-            # Executar o comando para verificar a conexão usando netcat (nc)
-            command = f"nc -vz {ip} {porta}"
-            os.system(command)
-            
-            print(f"Verificando proxy {ip}:{porta}")
-        else:
-            print("Proxy inválido encontrado no arquivo JSON.")
+    data = json.load(f)
+
+# Iterar sobre cada objeto (proxy) no arquivo JSON
+for proxy in data:
+    # Verificar se as chaves 'IP' e 'porta' existem para este proxy
+    if "IP" in proxy and "Porta" in proxy:
+        ip_adrss = {proxy['IP']}
+        porta_addrss = {proxy['Porta']}
+        command = f"nc -vz {ip_adrss}{porta_addrss}"
+        command = command.replace("{", "").replace("}", "").replace("'", "")
+        os.system(command)
+    else:
+        print("Chaves 'IP' e/ou 'porta' não encontradas para este proxy.")
