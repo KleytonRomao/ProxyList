@@ -35,7 +35,7 @@ for proxy in proxies:
         result.append({"IP": ip, "Porta": port})
 
 # Salvar resultados em um novo arquivo JSON
-with open('extracted_proxies.json', 'w') as outfile:
+with open('proxy.json', 'w') as outfile:
     json.dump(result, outfile, indent=4)
 
 print("Os IPs e Portas válidos foram extraídos e salvos em extracted_proxies.json")
