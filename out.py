@@ -38,4 +38,4 @@ for proxy in proxies:
 with open('proxy.json', 'w') as outfile:
     json.dump(result, outfile, indent=4)
 
-print("Os IPs e Portas válidos foram extraídos e salvos em extracted_proxies.json")
+#print("Os IPs e Portas válidos foram extraídos e salvos em extracted_proxies.json")
