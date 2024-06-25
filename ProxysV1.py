@@ -2,8 +2,9 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import out
-import conex
+from out import OutPut
+from conex import Cones
+
 class ProxyScraper:
     def __init__(self, url, output_file):
         self.url = url
@@ -67,5 +68,6 @@ output_file = 'output.json'
 proxy_scraper = ProxyScraper(url, output_file)
 proxy_scraper.scrape_and_save()
 proxy_scraper.load_and_parse_proxies()
-out
-conex
+
+OutPut()
+Cones.con()
