@@ -2,7 +2,7 @@ import json
 import os
 
 class Cones:
-    @staticmethod
+    
     def con():
         with open('proxy.json', 'r') as f:
             data = json.load(f)
@@ -17,5 +17,3 @@ class Cones:
             else:
                 print("Error")
 
-# Exemplo de uso:
-# Cones.con()

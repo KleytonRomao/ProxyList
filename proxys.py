@@ -2,8 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from out import OutPut
-from conex import Cones
+
 
 class ProxyScraper:
     def __init__(self, url, output_file):
@@ -59,15 +58,5 @@ class ProxyScraper:
 
                 # Remova strings vazias da lista resultante
                 proxy_info = list(filter(lambda x: x.strip() != "", proxy_info))
+                
 
-
-# Uso da classe
-url = 'https://www.freeproxy.world/?type=socks5&anonymity=&country=&speed=&port=&page=1'
-output_file = 'output.json'
-
-proxy_scraper = ProxyScraper(url, output_file)
-proxy_scraper.scrape_and_save()
-proxy_scraper.load_and_parse_proxies()
-
-OutPut()
-Cones.con()

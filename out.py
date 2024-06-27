@@ -6,10 +6,8 @@ class OutPut:
         with open(file_path, 'r') as file:
             return json.load(file)
 
-# Função para extrair IP e porta
 def extract_ip_and_port(proxy_string):
     parts = proxy_string.split('\n')
-    # Filtrar partes vazias
     parts = [part.strip() for part in parts if part.strip()]
     
     ip = "N/A"
@@ -20,31 +18,28 @@ def extract_ip_and_port(proxy_string):
     
     if len(parts) > 1:
         for part in parts[1:]:
-            if part.isdigit():  # Verifica se a parte é um número (porta)
+            if part.isdigit():
                 port = part
                 break
     
     return ip, port
 
-def main():
-    # Carregar proxies
-    proxies = OutPut.load_proxies()
+def refa():
 
-    # Lista para armazenar resultados
-    result = []
+    try:
+        proxies = OutPut.load_proxies()
 
-    # Extração
-    for proxy in proxies:
-        proxy_string = proxy.get("proxy", "")
-        ip, port = extract_ip_and_port(proxy_string)
-        if ip != "N/A" and port != "N/A":
-            result.append({"IP": ip, "Porta": port})
+        result = []
 
-    # Salvar resultados em um novo arquivo JSON
-    with open('proxy.json', 'w') as outfile:
-        json.dump(result, outfile, indent=4)
+        for proxy in proxies:
+            proxy_string = proxy.get("proxy", "")
+            ip, port = extract_ip_and_port(proxy_string)
+            if ip != "N/A" and port != "N/A":
+                result.append({"IP": ip, "Port": port})
 
-    print("Os IPs e Portas válidos foram extraídos e salvos em proxy.json")
+        with open('proxy.json', 'w') as outfile:
+            json.dump(result, outfile, indent=4)
 
-if __name__ == "__main__":
-    main()
+        print("Os IPs e Portas válidos foram extraídos e salvos em proxy.json")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
