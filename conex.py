@@ -17,4 +17,3 @@ class Cones:
             else:
                 print("Error")
 
-Cones.con()
